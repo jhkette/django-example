@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+# ADD INSTALLLED APPS HERE
 
 INSTALLED_APPS = [
     'pages',
@@ -78,8 +79,12 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'btredb',
+        'USER': 'postgres',
+        'PASSWORD': 'Gue55wh0',
+        'HOST': 'localhost'
+
     }
 }
 
@@ -120,6 +125,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+# # # # # # # # # # # # # # # # # STATIC # # # # # # # # # # # # # # # # # # # # # 
 # add static root
 # when you deploy project - it goes through all 
 # apps and puts it in a static root directory
@@ -133,3 +139,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'btre/static')
 ]
+
+# MEDIA FOLDER SETTINGS
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media');
+MEDIA_URL = './media/'
