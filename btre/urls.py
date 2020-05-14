@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
+from django.conf import settings #need to import
+from django.conf.urls.static import static #need to import
 
 # We list all the urls from apps here
 # wee add there path and the urls to include.
@@ -34,3 +34,4 @@ urlpatterns = [
 # from django.conf.urls.static import static
 # This is a really good guide on image uploads in DJANGO
 # https://learndjango.com/tutorials/django-file-and-image-uploads-tutorial
+# https://docs.djangoproject.com/en/3.0/howto/static-files/
